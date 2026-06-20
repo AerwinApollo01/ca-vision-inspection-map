@@ -6,9 +6,11 @@ visual inspection.
 
 **Prepared by Aerwin Apollo Perez.**
 
+**Live site → https://aerwinapollo01.github.io/ca-vision-inspection-map/**
+
 It's a single-page, dependency-free static site: filter ~50 accounts by industry, region,
 and company type, search by name or city, and sort by fit. Built to be readable, accessible,
-and deployable anywhere static files are served.
+and fast to load.
 
 ## Why this exists
 
@@ -42,16 +44,11 @@ python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
-## Deploy to GitHub Pages
+## Hosting
 
-1. Create a repo and push:
-   ```bash
-   git remote add origin https://github.com/<your-username>/ca-vision-inspection-map.git
-   git push -u origin main
-   ```
-2. In the repo: **Settings → Pages → Build and deployment → Source: Deploy from a branch**,
-   then select `main` / `root` and save.
-3. The site goes live at `https://<your-username>.github.io/ca-vision-inspection-map/`.
+The site is published with GitHub Pages from the `main` branch and is live at
+**https://aerwinapollo01.github.io/ca-vision-inspection-map/**. Pushes to `main` redeploy
+it automatically.
 
 ## Note on data
 
