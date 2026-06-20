@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>California AI Visual Inspection — Opportunity & Account Map</title>
   <meta name="description" content="A territory and account map of California manufacturers — Fortune 500 and high-growth startups — whose quality-inspection profile fits deep-learning AI visual inspection." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -74,7 +77,17 @@
     </section>
 
     <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
-    <section id="results" class="results" aria-label="Account map"></section>
+
+    <section class="map-section" aria-label="Map of accounts">
+      <div id="map" role="application" aria-label="Interactive map of California accounts"></div>
+      <div class="map-legend">
+        <span class="leg"><span class="dot dot-very"></span>Very high fit</span>
+        <span class="leg"><span class="dot dot-high"></span>High fit</span>
+        <span class="leg-hint">Click a dot for the fit reasoning and how to win it.</span>
+      </div>
+    </section>
+
+    <section id="results" class="results" aria-label="Account list"></section>
     <p id="empty" class="empty" hidden>No companies match these filters.</p>
   </main>
 
@@ -89,6 +102,8 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
