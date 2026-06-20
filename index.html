@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>California AI Visual Inspection — Opportunity & Account Map</title>
+  <meta name="description" content="A territory and account map of California manufacturers — Fortune 500 and high-growth startups — whose quality-inspection profile fits deep-learning AI visual inspection." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#results">Skip to account map</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <p class="eyebrow">Manufacturing &middot; AI &middot; California</p>
+      <h1>California AI Visual Inspection</h1>
+      <p class="subtitle">Opportunity &amp; account map</p>
+      <p class="byline">Prepared by Aerwin Apollo Perez &middot; June 2026</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <p class="lede">
+        AI-powered visual inspection is one of the most tangible ways a factory adopts AI — it
+        directly moves yield, scrap, throughput and labor. Deep-learning vision now catches the
+        defects that <em>vary</em> part to part, exactly where traditional rule-based machine
+        vision breaks down. California holds the densest and most regulated manufacturing base in
+        the U.S., which makes it the highest-leverage territory for this technology.
+      </p>
+
+      <div class="profile">
+        <h2>What an ideal account looks like</h2>
+        <ul>
+          <li><strong>High-volume or zero-defect production</strong> — more units, or higher cost per miss.</li>
+          <li><strong>Defects with real-world variation</strong> — where rule-based vision struggles.</li>
+          <li><strong>High cost of an escape</strong> — safety, recall, or expensive scrap.</li>
+          <li><strong>Labor-heavy manual inspection</strong> ripe for augmentation.</li>
+          <li><strong>Multi-line / multi-site</strong> — a first-station win that becomes a rollout.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="metrics" id="metrics" aria-label="Summary statistics"></section>
+
+    <section class="controls" aria-label="Filters">
+      <div class="search-row">
+        <label class="visually-hidden" for="search">Search companies</label>
+        <input id="search" type="search" placeholder="Search by company or city&hellip;" autocomplete="off" />
+      </div>
+      <div class="filter-row">
+        <div class="filter-group">
+          <label for="vertical">Industry</label>
+          <select id="vertical"></select>
+        </div>
+        <div class="filter-group">
+          <label for="region">Region</label>
+          <select id="region"></select>
+        </div>
+        <div class="filter-group">
+          <label for="type">Company type</label>
+          <select id="type"></select>
+        </div>
+        <div class="filter-group">
+          <label for="sort">Sort</label>
+          <select id="sort">
+            <option value="fit">Best fit first</option>
+            <option value="name">Company A–Z</option>
+            <option value="region">Region</option>
+          </select>
+        </div>
+        <button id="reset" type="button" class="reset-btn">Reset</button>
+      </div>
+    </section>
+
+    <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
+    <section id="results" class="results" aria-label="Account map"></section>
+    <p id="empty" class="empty" hidden>No companies match these filters.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>
+        Company list is illustrative and compiled from public information; locations reflect
+        principal California sites, not necessarily headquarters. Fit ratings are the author's
+        assessment of inspection-use suitability.
+      </p>
+      <p class="footer-meta">Prepared by Aerwin Apollo Perez &middot; June 2026</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
